@@ -220,6 +220,27 @@ class SiteController extends Controller
     echo '<pre>';
     var_dump($path);//gets data appended in the URL
     echo '</pre>';
+
+
+//    Use PUT / PATCH /DELETE
+    echo '<pre>';
+    var_dump($request->getBodyParams());//gets data appended in the URL
+    echo '</pre>';
+
+//    Check headers
+    echo '<pre>';
+    var_dump($request->headers);//gets data appended in the URL
+    echo '</pre>';
+
+//    Current user IP
+    echo '<pre>';
+    var_dump($request->userIP);//gets data appended in the URL
+    echo '</pre>';
+
+//    Current user IP
+    echo '<pre>';
+    var_dump($_SERVER['REMOTE_ADDR']);//gets data appended in the URL
+    echo '</pre>';
    
     }
 }
