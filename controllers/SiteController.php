@@ -139,6 +139,29 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+    
+    public function actionTest()
+    {
+        $test = new \app\models\TestModel();
+
+        // Shows all attributes of the TestModel
+
+        echo '<pre>';
+        var_dump($test->attributes());
+        echo '</pre>';
+
+        // We can assign values to the properties through
+        
+        // 1. ) Using object notation
+        $test->name ='John';
+
+        // 2. ) Using brackets/array notation
+        $test['surname'] ='Doe';
+
+        echo   $test['surname'];
+    }
+
+
     public function actionHello($message)
     {
         // second argument is an associative array []
