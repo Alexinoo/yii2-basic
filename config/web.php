@@ -70,6 +70,11 @@ $config = [
         
     ],
     'params' => $params,
+    'on beforeAction' => function(){
+         echo'<pre>';
+        var_dump("Application before Action");
+        echo'</pre>'; 
+    }
 ];
 
 if (YII_ENV_DEV) {

@@ -54,6 +54,15 @@ class SiteController extends Controller
         ];
     }
 
+    public function beforeAction($action)
+    {
+         echo'<pre>';
+        var_dump("Controller before Action");
+        echo'</pre>'; 
+        // exit;
+        return parent::beforeAction($action);
+    }
+
     /**
      * Displays homepage.
      *
@@ -61,7 +70,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        Yii::$app->test->hello();
+        // Yii::$app->test->hello();
         // echo'<pre>';
         // var_dump(Yii::$app->test);
         // echo'</pre>'; 
