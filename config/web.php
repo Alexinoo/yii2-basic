@@ -72,11 +72,11 @@ $config = [
     'params' => $params,
 
     // EVENT LISTENER
-    'on beforeAction' => function(){
-         echo'<pre>';
-        var_dump("Application before Action");
-        echo'</pre>'; 
-    }
+    // 'on beforeAction' => function(){
+    //      echo'<pre>';
+    //     var_dump("Application before Action");
+    //     echo'</pre>'; 
+    // }
 ];
 
 if (YII_ENV_DEV) {

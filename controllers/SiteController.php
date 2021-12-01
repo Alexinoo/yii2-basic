@@ -12,6 +12,7 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+    public $enableCsrfValidation = false;
     /**
      * {@inheritdoc}
      */
@@ -54,14 +55,14 @@ class SiteController extends Controller
         ];
     }
 
-    public function beforeAction($action)
-    {
-         echo'<pre>';
-        var_dump("Controller before Action");
-        echo'</pre>'; 
-        // exit;
-        return parent::beforeAction($action);
-    }
+    // public function beforeAction($action)
+    // {
+    //      echo'<pre>';
+    //     var_dump("Controller before Action");
+    //     echo'</pre>'; 
+    //     // exit;
+    //     return parent::beforeAction($action);
+    // }
 
     /**
      * Displays homepage.
@@ -196,10 +197,29 @@ class SiteController extends Controller
 
     public function actionRequest()
     {
-     $data =  Yii::$app->request->get(); // same as $_GET[' ']
+
+     $request =   Yii::$app->request;
+
+     $data =  $request->post(); // same as $_GET[' ']
     echo '<pre>';
     var_dump($data);//gets data appended in the URL
     echo '</pre>';
 
+    // check if the data was sent through Post or Get
+    $isGet = $request->isGet;
+    $isPost = $request->isPost;
+
+     // check host Information
+    $host = $request->hostInfo;
+    echo '<pre>';
+    var_dump($host);//gets data appended in the URL
+    echo '</pre>';
+
+     // check path info
+    $path = $request->pathInfo;
+    echo '<pre>';
+    var_dump($path);//gets data appended in the URL
+    echo '</pre>';
+   
     }
 }
