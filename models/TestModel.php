@@ -21,4 +21,14 @@ class TestModel extends \yii\base\Model
         ];
     }
 
+    // Rules - For validations
+
+    public function rules()
+    {
+        return [
+           ['name' , 'required'],
+        ];
+    }
+
+
 }
