@@ -2,4 +2,4 @@
 
 ?>
 
-<h1>Hello From Yii2</h1>
+<h1>Hello From Yii2 : <?php echo $message ?></h1>

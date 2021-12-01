@@ -125,8 +125,12 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-    public function actionHello()
+    public function actionHello($message)
     {
-        return $this->render('hello');
+        // second argument is an associative array []
+        // Associative array is key - value pair 
+        return $this->render('hello',[
+            'message' => $message ,
+        ]);
     }
 }
