@@ -142,10 +142,9 @@ class SiteController extends Controller
     
     public function actionTest()
     {
-        $test = new \app\models\TestModel();
-
+        $test = new \app\models\TestModel();     
+        
         // Shows all attributes of the TestModel
-
         echo '<pre>';
         var_dump($test->attributes());
         echo '</pre>';
