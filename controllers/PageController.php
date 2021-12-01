@@ -14,7 +14,8 @@ class PageController extends \yii\web\Controller{
         // renders when the request or the current action is  made using Ajax - 
         //Renders without layout but able to register css/js files ..
 
-
+        // Sharing Data among Views
+        $this->view->params['sharedVariable'] = 'I am shared';
 
         // Passing data to view - 
         // Done through a 2nd parameter which is an  associative array
