@@ -160,13 +160,19 @@ class SiteController extends Controller
 
         // We can assign values to the properties through
         
-        // 1. ) Using object notation
+        // 1. ) Using object notation 
         $test->name ='John';
 
         // 2. ) Using brackets/array notation
         $test['surname'] ='Doe';
+         $test->email ='john@example.com';
+          $test->myAge = 18;
 
-        echo   $test['surname'];
+        
+        // iterate over attributes and their values
+        foreach( $test as $attr=>$value){
+            echo $test->getAttributeLabel($attr). ' = ' . $value. '<br>';
+        }
     }
 
 
