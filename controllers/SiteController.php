@@ -149,6 +149,15 @@ class SiteController extends Controller
         var_dump($test->attributes());
         echo '</pre>';
 
+
+        // Attribute Labels
+        // Turns camel-case variable names into multiple words with the first letter in each word in upper case. 
+         echo '<pre>';
+        var_dump($test->getAttributeLabel('name'));
+        var_dump($test->getAttributeLabel('surname'));
+        var_dump($test->getAttributeLabel('myAge'));
+        echo '</pre>';
+
         // We can assign values to the properties through
         
         // 1. ) Using object notation
