@@ -65,7 +65,7 @@ class SiteController extends Controller
         // echo'<pre>';
         // var_dump(Yii::$app->test);
         // echo'</pre>'; 
-        exit;
+        // exit;
         return $this->render('index');
     }
 
