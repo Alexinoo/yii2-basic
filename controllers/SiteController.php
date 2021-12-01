@@ -161,10 +161,10 @@ class SiteController extends Controller
         // We can assign values to the properties through
         
         // 1. ) Using object notation /brackets/array notation
-        // $test->name ='John';
-        // $test['surname'] ='Doe';
-        // $test->email ='john@example.com';
-        // $test->myAge = 18;
+        $test->name ='John';
+        $test['surname'] ='Doe';
+        $test->email ='john@example.com';
+        $test->myAge = 18;
 
         
         // iterate over attributes and their values
@@ -182,16 +182,6 @@ class SiteController extends Controller
                 echo '</pre>';
         }
 
-
-
-
-
-
-
-
-
-
-
     }
 
 
@@ -202,5 +192,14 @@ class SiteController extends Controller
         return $this->render('hello',[
             'message' => $message ,
         ]);
+    }
+
+    public function actionRequest()
+    {
+     $data =  Yii::$app->request->get(); // same as $_GET[' ']
+    echo '<pre>';
+    var_dump($data);//gets data appended in the URL
+    echo '</pre>';
+
     }
 }
