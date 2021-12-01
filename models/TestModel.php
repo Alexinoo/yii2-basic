@@ -26,7 +26,10 @@ class TestModel extends \yii\base\Model
     public function rules()
     {
         return [
+            // single rule for a single attribute
            ['name' , 'required'],
+            //    single rule for multiple attributes
+         [['email' , 'myAge'] , 'required']
         ];
     }
 

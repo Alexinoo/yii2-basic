@@ -162,9 +162,9 @@ class SiteController extends Controller
         
         // 1. ) Using object notation /brackets/array notation
         // $test->name ='John';
-        $test['surname'] ='Doe';
-        $test->email ='john@example.com';
-        $test->myAge = 18;
+        // $test['surname'] ='Doe';
+        // $test->email ='john@example.com';
+        // $test->myAge = 18;
 
         
         // iterate over attributes and their values
