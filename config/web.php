@@ -49,9 +49,24 @@ $config = [
             'rules' => [
             ],
         ],
+
         'assetManager' => [
             'class' => 'app\components\AssetManager'
-        ]
+        ] ,
+
+        // Create 
+        // OPTION 1 : TestComponent  componentId => [ 'key' => value ]
+         'test' => [
+            'class' => 'app\components\TestComponent',
+        ] ,
+
+        // OPTION 2 : 
+        //   'test' =>  'app\components\TestComponent'
+
+        // OPTION 3 : Use closure
+        //   'test' => function(){
+        //     return new \app\components\TestComponent();
+        // }
         
     ],
     'params' => $params,
