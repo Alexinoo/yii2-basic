@@ -12,6 +12,8 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+    public $layout = 'base';
+
     public $enableCsrfValidation = false;
     /**
      * {@inheritdoc}
@@ -86,6 +88,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        $this->layout = 'login';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -243,4 +246,19 @@ class SiteController extends Controller
     echo '</pre>';
    
     }
+    
+    public function actionResponse()
+    {
+         $response =   Yii::$app->response;
+        // Works as well
+        // $response->content = "Hello from Thecodeholic";
+
+        $response->format =\yii\web\Response::FORMAT_JSON;
+        
+        return [
+            'name' => 'Alex',
+            'surname' => 'Something'
+        ];
+    }
+
 }
