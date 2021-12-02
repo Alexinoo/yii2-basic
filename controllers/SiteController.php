@@ -78,6 +78,24 @@ class SiteController extends Controller
         // var_dump(Yii::$app->test);
         // echo'</pre>'; 
         // exit;
+
+
+        // Create an instance of Timeline component
+        // $timeline = Yii::createObject([
+        //     'class' => \app\components\TimelineComponent::class ,
+        //     'numberOfEvent' => 20 ,
+        //     'visibility' => 'public' ,
+        //     'on addNewEvent' => function(){
+
+        //     }
+        // ]);
+
+        // echo'<pre>';
+        // var_dump($timeline);
+        // echo'</pre>'; 
+        // exit;
+
+
         return $this->render('index');
     }
 
