@@ -90,10 +90,20 @@ class SiteController extends Controller
         //     }
         // ]);
 
-        // echo'<pre>';
-        // var_dump($timeline);
-        // echo'</pre>'; 
-        // exit;
+         // use configure 
+         $timeline = new \app\components\TimelineComponent();
+         Yii::configure($timeline ,[
+            'numberOfEvent' => 20 ,
+            'visibility' => 'public' ,
+            'on addNewEvent' => function(){
+
+            }
+        ]);
+
+        echo'<pre>';
+        var_dump($timeline);
+        echo'</pre>'; 
+        exit;
 
 
         return $this->render('index');
