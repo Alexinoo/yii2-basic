@@ -6,6 +6,10 @@ $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
 
+<?php echo \app\widgets\ButtonWidget::widget([
+    'text' => 'Submit'
+]) ?>
+
     <div class="jumbotron text-center bg-transparent">
         <h1 class="display-4">Congratulations!</h1>
 
