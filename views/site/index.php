@@ -10,6 +10,12 @@ $this->title = 'My Yii Application';
     'text' => 'Submit'
 ]) ?>
 
+<?php \app\widgets\BgWidget::begin([
+    'bgColor' => 'lightgreen'
+]) ?>
+    Hello World
+<?php \app\widgets\BgWidget::end() ?>
+
     <div class="jumbotron text-center bg-transparent">
         <h1 class="display-4">Congratulations!</h1>
 
